@@ -95,6 +95,10 @@ tasks.withType<DependencyUpdatesTask> {
     gradleReleaseChannel="current"
 }
 
+tasks.compileJava {
+    options.compilerArgs.plusAssign("-parameters")
+}
+
 spotless {
     java {
         googleJavaFormat()
